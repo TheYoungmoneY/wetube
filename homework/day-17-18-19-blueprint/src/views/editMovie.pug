@@ -1,0 +1,13 @@
+extends templates/layout
+
+block content
+  h3 Editing #{movie.title}
+  .form-container
+    form(action=`/${movie.id}/edit`, method="post")
+      input(type="text", placeholder="Title", name="title", value=movie.title)
+      input(type="number", name="year", placeholder="Year", value=movie.year)
+      input(type="number", name="rating", placeholder="Rating", step='0.1', max=10, value=movie.rating)
+      textarea(name="synopsis", placeholder="Synopsis")=movie.synopsis
+      input(type="text", name="genres", placeholder="Genres", value=`${movie.genres.join(",")}`)
+      input(type="submit", value="Update Video")
+    a.form-container__link.form-container__link--delete(href=`/${movie.id}/delete`) Delete Video 

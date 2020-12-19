@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Video Player</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div class="videoPlayer" id="jsVideoPlayer">
+    <video width="700px" src="https://serranoarevalo.github.io/notflix/9bfd1023900e31286103369c803c7ee9.ogv"></video>
+    <div class="videoPlayer__controls" id="jsControls">
+      <div class="videoPlayer__column">
+        <span id="jsPlayButton">
+          <i class="fas fa-play"></i>
+        </span>
+      </div>
+
+      <div class="videoPlayer__column">
+        <div class="video-progress">
+          <progress class="progressBar" id="jsProgressBar" value="0" min="0"></progress>
+        </div>
+      </div>
+
+      <div class="videoPlayer__column">
+        <span id="currentTime"> 00:00 </span>
+        <span> / </span>
+        <span id="totalTime"> 00:00 </span>
+
+        <span id="jsVolumeBtn">
+          <i class="fas fa-volume-up"></i>
+        </span>
+        <span id="jsSettings">
+          <i class="fas fa-expand"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script src="src/index.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+</body>
+
+</html>

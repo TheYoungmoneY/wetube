@@ -1,0 +1,11 @@
+extends templates/layout
+
+block content
+  h1=pageTitle
+  form(action="/create", method="post")
+    input(type="text", name="title", placeholder="Title")
+    input(type="number", name="year", placeholder="Year")
+    input(type="number", name="rating", placeholder="Rating", step='0.1', max=10)
+    textarea(name="synopsis", placeholder="Synopsis")
+    input(type="text", name="genres", placeholder="Genres")
+    input(type="submit", value="Add Movie")

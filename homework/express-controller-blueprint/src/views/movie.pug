@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css")
+        title #{pageTitle} | #{siteName}
+    body
+        main 
+            h1 #{pageTitle}
+            .search__header
+                //- h3 Searching for: #{searchingBy}
+            .search__videos
+                if videos.length === 0
+                    h5 No Videos Found
+                mixin videoBlock(video = {})
+                    .videoBlock
+                        a(href=routes.videoDetail(video.id))
+                            h4.videoBlock__title=video.title
+                each item in videos 
+                    +videoBlock({
+                        id:item.id,
+                        title:item.title,
+                        year:item.year
+                    })
+

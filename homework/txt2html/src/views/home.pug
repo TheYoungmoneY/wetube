@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css")
+        title TXT2HTML
+    body
+        main 
+            h1 TXT2HTML!
+            .form-container
+                form(action=`/read`, method="post", enctype="multipart/form-data")
+                    div.fileUpload
+                        input(type="file", id="file", name="txtFile", required=true, accept="text/plain")
+                    input(type="submit", value="Convert!")
+
+
+
+
+                
