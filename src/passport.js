@@ -11,7 +11,7 @@ passport.use(new GithubStrategy({
     clientID: process.env.GH_ID,
     clientSecret: process.env.GH_SECRET,
     callbackURL: process.env.PRODUCTION
-        ? `https://secure-anchorage-45478.herokuapp.com/${routes.githubCallback}`
+        ? `https://secure-anchorage-45478.herokuapp.com${routes.githubCallback}`
         : `http://localhost:4000${routes.githubCallback}`
 }, githubLoginCallback
 ));
